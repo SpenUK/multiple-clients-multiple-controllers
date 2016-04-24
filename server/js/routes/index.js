@@ -1,9 +1,7 @@
 'use strict';
 
 exports.display = function(req, res){
-	const stylesheets = [
-		'/css/core.css'
-	];
+	const stylesheets = [];
 
 	const scripts = [
 		'/socket.io/socket.io.js',
@@ -20,9 +18,7 @@ exports.display = function(req, res){
 exports.controller = function (req, res) {
 	const token = req.params.id;
 
-	const stylesheets = [
-		'/css/core.css'
-	];
+	const stylesheets = [];
 
 	const scripts = [
 		'/socket.io/socket.io.js',
