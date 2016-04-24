@@ -25,7 +25,7 @@ const ControllerView = ViewExtension.extend({
 		},
 
 		openController: function () {
-			const url = '//localhost:3000/controller/' + this.model.get('token');
+			const url = '/controller/' + this.model.get('token');
 			window.open(url, 'controller', 'width=200, height=200, left=900, top=160, menubar=0, status=0, scrollbars=0, toolbar=0');	
 		},
 
