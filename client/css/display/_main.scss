@@ -1,0 +1,40 @@
+body {
+	background-color: $background-color;
+}
+
+.client {
+	display: block;
+	height: 180px;
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    white-space: nowrap;
+
+}
+
+.client .controllers {
+	display: inline-block;
+	vertical-align: top;
+	height: 180px;
+}
+
+.client .client__details,
+.client .controller {
+	display: inline-block;
+	vertical-align: top;
+	height: 180px;
+	width: 180px;
+	border: 2px solid rgba(0,0,0,1);
+	text-align: center;
+}
+
+.client .client__details {
+	background-color: rgba(60,60,60,1);
+}
+
+.client .client__details .token {
+	color: white;
+}
+
+.client .controller {
+	background-color: rgba(245,245,245,1);
+}

@@ -1,0 +1,4 @@
+public/
+node_modules/
+src/server/
+client/js/core/
