@@ -18,8 +18,6 @@ const ClientsView = CollectionViewExtension.extend({
 	initialize: function() {
 		this._super.apply(this, arguments);
 
-		window.clients = this.collection;
-
 		_.bindAll(this, 'addClient');
 
 		// THIS client
@@ -27,7 +25,7 @@ const ClientsView = CollectionViewExtension.extend({
 		// all other clients
 		this.socket.on('client:added', this.addClient);
 
-		this.socket.on('poop', (data) => {
+		this.socket.on('display:removed', (data) => {
 			const model = this.collection.findWhere({
 				token: data.token
 			});

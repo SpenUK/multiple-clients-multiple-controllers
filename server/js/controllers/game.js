@@ -25,6 +25,21 @@ module.exports = {
 		if (!match) {
 			this.openControllerSlots[token] = controllerModel;
 		}
+	},
+
+	joinControllerSlot (token, socket) {
+		const controllerModel = this.openControllerSlots[token];
+
+		if (controllerModel) {
+			controllerModel.assignSocket(socket);
+			delete this.openControllerSlots[token];
+
+			return controllerModel
+		}
+
+		socket.emit('controller:rejected');
+
+		return false;
 	}
 
 };

@@ -8,14 +8,7 @@ const displayInitialize = function () {
 };
 
 const controllerInitialize = function (token) {
-	const controllerModel = gameController.openControllerSlots[token];
-
-	if (controllerModel) {
-		controllerModel.assignSocket(this);
-		delete gameController.openControllerSlots[token];
-	} else {
-		this.emit('controller:rejected');
-	}
+	gameController.joinControllerSlot(token, this)
 };
 
 const onConnection = function (socket) {
